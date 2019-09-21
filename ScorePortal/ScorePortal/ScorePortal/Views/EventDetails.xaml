@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ui="clr-namespace:ScorePortal.UiComponents"
+             x:Class="ScorePortal.Views.EventDetails"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:controls="clr-namespace:PanCardView.Controls;assembly=PanCardView">
+    <ContentPage.Content>
+        <StackLayout>
+            <ui:DashboardHeader TitleText="F O O T B A L L"
+                                      ShowProgressIndicator="{Binding IsBusy}" 
+                                      ShowBackButton="False" 
+                                      LeftIconClickedCommand="{Binding GenerateTestCrashCommand}" 
+                                      ShowMenuIcon="False" 
+                                      IsTitleBlack="True" 
+                                      RightIconClickedCommand="{Binding GoToSettingsCommand}" 
+                                      BackgroundColor="{StaticResource PrimaryWhite}" 
+                                      HasBlackForeground="True"/>
+            <ScrollView>
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <cards:CarouselView 
+                    x:Name="carouselview"
+                    IsCyclical="false"
+                    SelectedIndex="{Binding CurrentIndex}"
+                    ItemsSource="{Binding ImgSources}">
+
+                        <cards:CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame                
+                        Margin="0"                                     
+                        VerticalOptions="Center"  
+                        HorizontalOptions="Fill"
+                        Padding="0" 
+                        HasShadow="false"
+                        IsClippedToBounds="true"
+                        CornerRadius="0">
+                                    <ffimage:CachedImage x:Name="bgImg" Source="{Binding .}" Aspect="AspectFill" HeightRequest="240"/>
+                                </Frame>
+                            </DataTemplate>
+                        </cards:CarouselView.ItemTemplate>
+                        <controls:IndicatorsControl ToFadeDuration="1500" />
+
+                    </cards:CarouselView>                    
+                    <Label Margin="8,4,0,0" Text="Table Standings"></Label>
+                    <BoxView Margin="0,4" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"></BoxView>
+                    <!--Table Standing-->
+                    <StackLayout>
+                        <ListView ItemsSource="{Binding ClubStandings}"
+                                  RowHeight="28"
+                                  HeightRequest="{Binding LeagueTableHeight}">
+                            <ListView.Header>
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <ui:FootballTable     Id=""
+                                                          ClubImage=""
+                                                          ClubName="Club"
+                                                          Mp="MP"
+                                                          Win="W"
+                                                          Draw="D"
+                                                          Lose="L"
+                                                          Gf="GF"
+                                                          Ga="GA"
+                                                          Gd="GD"
+                                                          Pts="Pts"
+                                                      >
+                                        
+                                    </ui:FootballTable>
+                                </StackLayout>
+                            </ListView.Header>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ui:FootballTable VerticalOptions="Center"
+                                                          Id="{Binding Id}" 
+                                                          ClubImage="{Binding ClubImage}"
+                                                          ClubName="{Binding ClubName}"
+                                                          Mp="{Binding Mp}"
+                                                          Win="{Binding Win}"
+                                                          Draw="{Binding Draw}"
+                                                          Lose="{Binding Lose}"
+                                                          Gf="{Binding Gf}"
+                                                          Ga="{Binding Ga}"
+                                                          Gd="{Binding Gd}"
+                                                          Pts="{Binding Pts}"
+                                                          ></ui:FootballTable>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <BoxView Margin="0,4" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"></BoxView>
+                    <!--Last Matches-->
+                    <StackLayout>
+                        <ListView ItemsSource="{Binding LastMatchesPlayed}" RowHeight="60">
+                            <ListView.Header>
+                                <StackLayout Padding="0" Spacing="0" Margin="0">
+                                    <Label Margin="8,0,0,0" HorizontalOptions="Start" Text="Last Matches" HorizontalTextAlignment="Start"></Label>
+                                    <BoxView Margin="0,8" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"></BoxView>
+                                </StackLayout>
+                            </ListView.Header>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ui:LastMatch MatchDate="{Binding MatchTime}"
+                                                      HomeClubName="{Binding HomeClubName}" 
+                                                      HomeClubScore="{Binding HomeClubScore}"
+                                                      HomeClubImg="{Binding HomeClubImge}"
+                                                      AwayClubName="{Binding AwayClubName}"
+                                                      AwayClubScore="{Binding AwayClubScore}"
+                                                      AwayClubImg="{Binding AwayClubImg}">
+                                        </ui:LastMatch>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout>
+                        
+                    </StackLayout>
+                </StackLayout>
+                
+            </ScrollView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

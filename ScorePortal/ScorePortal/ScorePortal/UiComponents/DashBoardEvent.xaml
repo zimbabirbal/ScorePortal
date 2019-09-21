@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+       x:Class="ScorePortal.UiComponents.DashBoardEvent"
+             Padding="2,0"
+             CornerRadius="8"
+       HeightRequest="240"
+             x:Name="frame">
+    <Grid 
+        Padding="0" 
+        Margin="0"
+        x:Name="grid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="240"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ffimage:CachedImage Grid.Row="0" Grid.Column="0"
+               x:Name="img"
+               Source="game"
+               Margin="-4,0"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand" 
+               Aspect="Fill" />
+        
+        <Label Grid.Row="0" Grid.Column="0"
+           x:Name="titleText"
+           Text="Gorkhali Tournament" 
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontAttributes="Bold"
+           FontSize="38"/>
+
+    </Grid>
+
+
+</Frame>
