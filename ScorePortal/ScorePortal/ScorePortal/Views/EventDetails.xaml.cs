@@ -18,5 +18,10 @@ namespace ScorePortal.Views
 			InitializeComponent ();
             this.BindingContext = new EventDetailsVm();
 		}
-	}
+
+        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            await Navigation.PushModalAsync(new MatchDetails());
+        }
+    }
 }

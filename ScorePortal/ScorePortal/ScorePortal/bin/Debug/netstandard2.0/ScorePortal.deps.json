@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "4638b3cd3e2fc3e10c242742d6914b57d1e3be07"
+    "signature": "3ab5028fe89e5037b032e35044588d979a31ff6a"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,7 +10,9 @@
       "ScorePortal/1.0.0": {
         "dependencies": {
           "CardsView": "2.2.1",
+          "LiveXAML": "2.1.73",
           "NETStandard.Library": "2.0.3",
+          "Syncfusion.Xamarin.SfTabView": "17.2.0.51",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg": "2.4.11.982",
@@ -33,6 +35,7 @@
           }
         }
       },
+      "LiveXAML/2.1.73": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
@@ -44,6 +47,37 @@
           "lib/netstandard1.3/SkiaSharp.dll": {
             "assemblyVersion": "1.68.0.0",
             "fileVersion": "1.68.0.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/17.2.0.51": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "17.2.0.51",
+            "fileVersion": "17.2.0.51"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/17.2.0.51": {
+        "dependencies": {
+          "Syncfusion.Licensing": "17.2.0.51"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "17.2451.0.51",
+            "fileVersion": "17.2451.0.51"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/17.2.0.51": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.2.0.51",
+          "Xamarin.Forms": "4.2.0.778463"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfTabView.XForms.dll": {
+            "assemblyVersion": "17.2451.0.51",
+            "fileVersion": "17.2451.0.51"
           }
         }
       },
@@ -137,6 +171,13 @@
       "path": "cardsview/2.2.1",
       "hashPath": "cardsview.2.2.1.nupkg.sha512"
     },
+    "LiveXAML/2.1.73": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WuyZAgaVvGIN4MoOR5VK3X8PFiCv3swffxzMd6Nf7cJIf32zCjbTgrkasY5K8NSNZ2U4y2nFgLAZ4oeqUvueEA==",
+      "path": "livexaml/2.1.73",
+      "hashPath": "livexaml.2.1.73.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -157,6 +198,27 @@
       "sha512": "sha512-ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
       "path": "skiasharp/1.68.0",
       "hashPath": "skiasharp.1.68.0.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/17.2.0.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-luFCV+5Ja6gLwu4s8WelqX02vQtta5+k1znD2zabiRsamjFSwsga2LDe0nbI7hVDCygD58FIdJF6slmwrYktPQ==",
+      "path": "syncfusion.licensing/17.2.0.51",
+      "hashPath": "syncfusion.licensing.17.2.0.51.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/17.2.0.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mz/wFpGuEv6PiwDoeG8nbGF9qJYKKUK3P2ZxKL8iI1vgp5bWQ+FvKexfDeNjO5L5FvLzgXbu8617Z9ObH/4Stg==",
+      "path": "syncfusion.xamarin.core/17.2.0.51",
+      "hashPath": "syncfusion.xamarin.core.17.2.0.51.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfTabView/17.2.0.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IQFUePcqm81DteL3jMWkFcrg9W5l2MfgISYT/U5WXxCM8xFC2XwNS06eXcKaQIGWpTuKG7P845AoSddIXJteWg==",
+      "path": "syncfusion.xamarin.sftabview/17.2.0.51",
+      "hashPath": "syncfusion.xamarin.sftabview.17.2.0.51.nupkg.sha512"
     },
     "Xamarin.FFImageLoading/2.4.11.982": {
       "type": "package",

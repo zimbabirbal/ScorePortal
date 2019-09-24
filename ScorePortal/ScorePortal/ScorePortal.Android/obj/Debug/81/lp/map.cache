@@ -1,4 +1,3 @@
-System.Runtime
 FFImageLoading
 FFImageLoading.Forms
 FFImageLoading.Forms.Platform
@@ -9,7 +8,14 @@ FFImageLoading.Transformations
 FormsViewGroup
 PanCardView
 PanCardView.Droid
+ScorePortal
 SkiaSharp
+Syncfusion.Core.XForms.Android
+Syncfusion.Core.XForms
+Syncfusion.Licensing
+Syncfusion.SfTabView.XForms.Android
+Syncfusion.SfTabView.XForms
+System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -34,7 +40,6 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-ScorePortal
 netstandard
 System.Resources.ResourceManager
 System.Reflection.Extensions

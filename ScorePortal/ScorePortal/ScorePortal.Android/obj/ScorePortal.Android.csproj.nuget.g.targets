@@ -25,5 +25,6 @@
     <Import Project="$(NuGetPackageRoot)xamarin.forms\4.2.0.778463\build\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\4.2.0.778463\build\Xamarin.Forms.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.v7.palette\28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.Palette.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.v7.palette\28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.Palette.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.support.v7.mediarouter\28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.support.v7.mediarouter\28.0.0.1\build\monoandroid81\Xamarin.Android.Support.v7.MediaRouter.targets')" />
+    <Import Project="$(NuGetPackageRoot)livexaml\2.1.73\build\netstandard2.0\LiveXAML.targets" Condition="Exists('$(NuGetPackageRoot)livexaml\2.1.73\build\netstandard2.0\LiveXAML.targets')" />
   </ImportGroup>
 </Project>

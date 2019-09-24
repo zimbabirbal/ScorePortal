@@ -44,10 +44,11 @@
             <Color x:Key="PrimaryDisabledButton">#CFA438</Color>
             <Color x:Key="PrimaryBlue">#73C8D2</Color>
             <Color x:Key="PrimaryBlack">#000000</Color>
-            <Color x:Key="PrimaryGray">#CCCCCC</Color>
+            <Color x:Key="PrimaryGrey">#CCCCCC</Color>
             <Color x:Key="PrimaryWhite">#FFFFFF</Color>
             <Color x:Key="PrimaryRed">#EC1E28</Color>
-            <Color x:Key="SecondaryGray">#C4C4C4</Color>
+            <Color x:Key="PrimaryPurple">#8B008B</Color>
+            <Color x:Key="SecondaryGrey">#C4C4C4</Color>
 
             <!-- DASHBOARD -->
             <Color x:Key="DashboardTitleBackgroundColor">#DFFFFFFF</Color>

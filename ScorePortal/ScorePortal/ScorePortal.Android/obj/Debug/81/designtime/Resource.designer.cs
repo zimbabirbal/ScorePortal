@@ -2230,6 +2230,9 @@ namespace ScorePortal.Droid
 			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat_android_id = global::ScorePortal.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ScorePortal.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::ScorePortal.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.input_layout_drop_down_icon = global::ScorePortal.Droid.Resource.Drawable.input_layout_drop_down_icon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::ScorePortal.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::ScorePortal.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::ScorePortal.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::ScorePortal.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::ScorePortal.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -7075,6 +7078,15 @@ namespace ScorePortal.Droid
 			
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
+			
+			// aapt resource value: 0x7F010011
+			public const int inputlayout_togglecollapseicon = 2130771985;
+			
+			// aapt resource value: 0x7F010012
+			public const int inputlayout_togglevisibleicon = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int input_layout_drop_down_icon = 2130771987;
 			
 			// aapt resource value: 0x7F010009
 			public const int mc = 2130771977;

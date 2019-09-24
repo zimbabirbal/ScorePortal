@@ -33,7 +33,7 @@
                FontAttributes="Bold" 
                TextColor="White" 
                WidthRequest="32" 
-               BackgroundColor="Purple"></Label>
+               BackgroundColor="{StaticResource PrimaryPurple}"></Label>
     </StackLayout>
     <Label Grid.Row="1" Grid.Column="1" Text=":" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
     
@@ -49,7 +49,7 @@
                TextColor="White" 
                FontAttributes="Bold" 
                HorizontalOptions="Start" 
-               BackgroundColor="Purple" 
+               BackgroundColor="{StaticResource PrimaryPurple}" 
                WidthRequest="32"></Label>
         
         <Label Margin="0,0,8,0" 

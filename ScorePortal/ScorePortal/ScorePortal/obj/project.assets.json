@@ -14,6 +14,12 @@
           "lib/netstandard2.0/PanCardView.dll": {}
         }
       },
+      "LiveXAML/2.1.73": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/LiveXAML.targets": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -67,6 +73,40 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "Syncfusion.Licensing/17.2.0.51": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/17.2.0.51": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "17.2.0.51"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/17.2.0.51": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.2.0.51",
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SfTabView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfTabView.XForms.dll": {}
         }
       },
       "Xamarin.FFImageLoading/2.4.11.982": {
@@ -177,6 +217,27 @@
         "lib/wpa81/PanCardView.dll"
       ]
     },
+    "LiveXAML/2.1.73": {
+      "sha512": "WuyZAgaVvGIN4MoOR5VK3X8PFiCv3swffxzMd6Nf7cJIf32zCjbTgrkasY5K8NSNZ2U4y2nFgLAZ4oeqUvueEA==",
+      "type": "package",
+      "path": "livexaml/2.1.73",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard2.0/LiveXAML.targets",
+        "build/netstandard2.0/XamarinLive.Build.dll",
+        "build/netstandard2.0/XamarinLive.Common.dll",
+        "build/netstandard2.0/minified.cs",
+        "build/netstandard2.0/minified.tpl.cs",
+        "build/portable-win+net45+wp80+win81+wpa81/LiveXAML.targets",
+        "build/portable-win+net45+wp80+win81+wpa81/XamarinLive.Build.dll",
+        "build/portable-win+net45+wp80+win81+wpa81/XamarinLive.Common.dll",
+        "build/portable-win+net45+wp80+win81+wpa81/minified.cs",
+        "build/portable-win+net45+wp80+win81+wpa81/minified.tpl.cs",
+        "livexaml.2.1.73.nupkg.sha512",
+        "livexaml.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -198,6 +259,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -366,6 +428,93 @@
         "skiasharp.1.68.0.nupkg.sha512",
         "skiasharp.nuspec",
         "xamarin.interactive/SkiaSharp.Workbooks.dll"
+      ]
+    },
+    "Syncfusion.Licensing/17.2.0.51": {
+      "sha512": "luFCV+5Ja6gLwu4s8WelqX02vQtta5+k1znD2zabiRsamjFSwsga2LDe0nbI7hVDCygD58FIdJF6slmwrYktPQ==",
+      "type": "package",
+      "path": "syncfusion.licensing/17.2.0.51",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.17.2.0.51.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/17.2.0.51": {
+      "sha512": "Mz/wFpGuEv6PiwDoeG8nbGF9qJYKKUK3P2ZxKL8iI1vgp5bWQ+FvKexfDeNjO5L5FvLzgXbu8617Z9ObH/4Stg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/17.2.0.51",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/DropDownIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleCollapsedIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.17.2.0.51.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfTabView/17.2.0.51": {
+      "sha512": "IQFUePcqm81DteL3jMWkFcrg9W5l2MfgISYT/U5WXxCM8xFC2XwNS06eXcKaQIGWpTuKG7P845AoSddIXJteWg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sftabview/17.2.0.51",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfTabView.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfTabView.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfTabView.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfTabView.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfTabView.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfTabView.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfTabView.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfTabView.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfTabView.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfTabView.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP/Properties/Syncfusion.SfTabView.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP/Syncfusion.SfTabView.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfTabView.XForms.xml",
+        "syncfusion.xamarin.sftabview.17.2.0.51.nupkg.sha512",
+        "syncfusion.xamarin.sftabview.nuspec"
       ]
     },
     "Xamarin.FFImageLoading/2.4.11.982": {
@@ -824,7 +973,9 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "CardsView >= 2.2.1",
+      "LiveXAML >= 2.1.73",
       "NETStandard.Library >= 2.0.3",
+      "Syncfusion.Xamarin.SfTabView >= 17.2.0.51",
       "Xamarin.FFImageLoading >= 2.4.11.982",
       "Xamarin.FFImageLoading.Forms >= 2.4.11.982",
       "Xamarin.FFImageLoading.Svg >= 2.4.11.982",
@@ -835,26 +986,23 @@
   },
   "packageFolders": {
     "C:\\Users\\taman\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\taman\\source\\repos\\SP\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal.csproj",
+      "projectUniqueName": "C:\\Users\\taman\\source\\repos\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal.csproj",
       "projectName": "ScorePortal",
-      "projectPath": "C:\\Users\\taman\\source\\repos\\SP\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal.csproj",
+      "projectPath": "C:\\Users\\taman\\source\\repos\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal.csproj",
       "packagesPath": "C:\\Users\\taman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\taman\\source\\repos\\SP\\ScorePortal\\ScorePortal\\ScorePortal\\obj\\",
+      "outputPath": "C:\\Users\\taman\\source\\repos\\ScorePortal\\ScorePortal\\ScorePortal\\ScorePortal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\taman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -881,11 +1029,19 @@
             "target": "Package",
             "version": "[2.2.1, )"
           },
+          "LiveXAML": {
+            "target": "Package",
+            "version": "[2.1.73, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Syncfusion.Xamarin.SfTabView": {
+            "target": "Package",
+            "version": "[17.2.0.51, )"
           },
           "Xamarin.FFImageLoading": {
             "target": "Package",

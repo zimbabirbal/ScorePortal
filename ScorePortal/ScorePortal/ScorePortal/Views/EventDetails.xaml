@@ -43,7 +43,7 @@
 
                     </cards:CarouselView>                    
                     <Label Margin="8,4,0,0" Text="Table Standings"></Label>
-                    <BoxView Margin="0,4" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"></BoxView>
+                    <BoxView Margin="0,4" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryGrey}"></BoxView>
                     <!--Table Standing-->
                     <StackLayout>
                         <ListView ItemsSource="{Binding ClubStandings}"
@@ -88,14 +88,16 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackLayout>
-                    <BoxView Margin="0,4" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"></BoxView>
+                    <BoxView Margin="0,4" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryGrey}"></BoxView>
                     <!--Last Matches-->
                     <StackLayout>
-                        <ListView ItemsSource="{Binding LastMatchesPlayed}" RowHeight="60">
+                        <ListView ItemsSource="{Binding LastMatchesPlayed}" 
+                                  RowHeight="60"
+                                  ItemTapped="ListView_ItemTapped">
                             <ListView.Header>
                                 <StackLayout Padding="0" Spacing="0" Margin="0">
                                     <Label Margin="8,0,0,0" HorizontalOptions="Start" Text="Last Matches" HorizontalTextAlignment="Start"></Label>
-                                    <BoxView Margin="0,8" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="Gray"></BoxView>
+                                    <BoxView Margin="0,8" HeightRequest="0.5" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryGrey}"></BoxView>
                                 </StackLayout>
                             </ListView.Header>
                             <ListView.ItemTemplate>
