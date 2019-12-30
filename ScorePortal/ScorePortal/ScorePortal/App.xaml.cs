@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScorePortal.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,8 @@ namespace ScorePortal
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTgzMjYzQDMxMzcyZTM0MmUzMGgvcHkzMURNRDhMVzZCUnd6TmhUUVFPalVUNVFIb0ZIWDNiQkRucmNYSWM9");
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ScorePortal.Views.AdvancedTournament"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="24,0" Spacing="16">
+                <Label
+                    Margin="0,24"
+                    FontSize="18"
+                    Text="Add Team Information"
+                    TextColor="{StaticResource SecondaryBlue}" />
+                <Frame CornerRadius="12">
+                    <StackLayout>
+                        <Label Text="Team A" />
+                        <SearchBar
+                            x:Name="searchBar"
+                            Margin="0"
+                            Placeholder="Search Team"
+                            TextChanged="searchBar_TextChanged" />
+                        <ListView
+                            x:Name="searchResults"
+                            HeightRequest="120"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="CenterAndExpand" />
+                        <Button
+                            Margin="0,16"
+                            BackgroundColor="{StaticResource SecondaryBlue}"
+                            BorderColor="{StaticResource SecondaryBlue}"
+                            BorderWidth="1"
+                            CornerRadius="36"
+                            HeightRequest="48"
+                            Text="Add New Team"
+                            TextColor="White" />
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="12">
+                    <StackLayout>
+                        <Label Text="Team B" />
+                        <SearchBar
+                            x:Name="searchBar1"
+                            Margin="0"
+                            Focused="searchBar1_Focused"
+                            Placeholder="Search Team"
+                            TextChanged="searchBar1_TextChanged"
+                            Unfocused="searchBar1_Unfocused" />
+                        <ListView
+                            x:Name="searchResults1"
+                            HeightRequest="120"
+                            HorizontalOptions="Fill"
+                            ItemSelected="searchResults1_ItemSelected"
+                            VerticalOptions="CenterAndExpand" />
+                        <ListView
+                            x:Name="innerSearchResults1"
+                            HeightRequest="120"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="CenterAndExpand" />
+                        <Button
+                            Margin="0,16"
+                            BackgroundColor="{StaticResource SecondaryBlue}"
+                            BorderColor="{StaticResource SecondaryBlue}"
+                            BorderWidth="1"
+                            CornerRadius="36"
+                            HeightRequest="48"
+                            Text="Add New Team"
+                            TextColor="White" />
+                    </StackLayout>
+                </Frame>
+                <Button
+                    Margin="0,16"
+                    BackgroundColor="{StaticResource SecondaryBlue}"
+                    BorderColor="{StaticResource SecondaryBlue}"
+                    BorderWidth="1"
+                    CornerRadius="36"
+                    HeightRequest="48"
+                    Text="Save"
+                    TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
