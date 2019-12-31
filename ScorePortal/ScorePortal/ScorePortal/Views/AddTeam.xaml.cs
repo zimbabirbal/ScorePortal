@@ -31,6 +31,8 @@ namespace ScorePortal.Views
                 PlayerList.Add(new Player { Name = playerNameEntry.Text, Info = playerInfoEntry.Text });
                 playerList.ItemsSource = PlayerList;
                 playerList.HeightRequest = playerListRowHeight * PlayerList.Count;
+                playerInfoEntry.Text = string.Empty;
+                playerNameEntry.Text = string.Empty;
             }
         }
 

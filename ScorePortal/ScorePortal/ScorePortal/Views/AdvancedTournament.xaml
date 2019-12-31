@@ -8,77 +8,79 @@
     mc:Ignorable="d">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="24,0" Spacing="16">
-                <Label
-                    Margin="0,24"
-                    FontSize="18"
-                    Text="Add Team Information"
-                    TextColor="{StaticResource SecondaryBlue}" />
-                <Frame CornerRadius="12">
-                    <StackLayout>
-                        <Label Text="Team A" />
-                        <SearchBar
-                            x:Name="searchBar"
-                            Margin="0"
-                            Placeholder="Search Team"
-                            TextChanged="searchBar_TextChanged" />
-                        <ListView
-                            x:Name="searchResults"
-                            HeightRequest="120"
-                            HorizontalOptions="Fill"
-                            VerticalOptions="CenterAndExpand" />
-                        <Button
-                            Margin="0,16"
-                            BackgroundColor="{StaticResource SecondaryBlue}"
-                            BorderColor="{StaticResource SecondaryBlue}"
-                            BorderWidth="1"
-                            CornerRadius="36"
-                            HeightRequest="48"
-                            Text="Add New Team"
-                            TextColor="White" />
-                    </StackLayout>
-                </Frame>
-                <Frame CornerRadius="12">
-                    <StackLayout>
-                        <Label Text="Team B" />
-                        <SearchBar
-                            x:Name="searchBar1"
-                            Margin="0"
-                            Focused="searchBar1_Focused"
-                            Placeholder="Search Team"
-                            TextChanged="searchBar1_TextChanged"
-                            Unfocused="searchBar1_Unfocused" />
-                        <ListView
-                            x:Name="searchResults1"
-                            HeightRequest="120"
-                            HorizontalOptions="Fill"
-                            ItemSelected="searchResults1_ItemSelected"
-                            VerticalOptions="CenterAndExpand" />
-                        <ListView
-                            x:Name="innerSearchResults1"
-                            HeightRequest="120"
-                            HorizontalOptions="Fill"
-                            VerticalOptions="CenterAndExpand" />
-                        <Button
-                            Margin="0,16"
-                            BackgroundColor="{StaticResource SecondaryBlue}"
-                            BorderColor="{StaticResource SecondaryBlue}"
-                            BorderWidth="1"
-                            CornerRadius="36"
-                            HeightRequest="48"
-                            Text="Add New Team"
-                            TextColor="White" />
-                    </StackLayout>
-                </Frame>
-                <Button
-                    Margin="0,16"
-                    BackgroundColor="{StaticResource SecondaryBlue}"
-                    BorderColor="{StaticResource SecondaryBlue}"
-                    BorderWidth="1"
-                    CornerRadius="36"
-                    HeightRequest="48"
-                    Text="Save"
-                    TextColor="White" />
+            <StackLayout>
+                <StackLayout BackgroundColor="{StaticResource SecondaryBlue}">
+                    <Label
+                        Margin="24,12"
+                        FontSize="22"
+                        Text="Add Team Information"
+                        TextColor="White" />
+                </StackLayout>
+                <StackLayout
+                    Padding="24,0"
+                    Spacing="16"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Frame CornerRadius="12">
+                        <StackLayout>
+                            <Label Text="Add Team" />
+                            <SearchBar
+                                x:Name="searchBarTeamA"
+                                Margin="0"
+                                Focused="searchBarTeamA_Focused"
+                                Placeholder="Search Team"
+                                TextChanged="searchBarTeamA_TextChanged"
+                                Unfocused="searchBarTeamA_Unfocused" />
+                            <ListView
+                                x:Name="searchBarTeamAList"
+                                HeightRequest="160"
+                                HorizontalOptions="Fill"
+                                IsVisible="False"
+                                ItemSelected="searchBarTeamAList_ItemSelected"
+                                VerticalOptions="CenterAndExpand" />
+                            <ListView x:Name="innerListTeamA" ItemSelected="innerListSearchBarTeamA_ItemSelected">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label
+                                                    LineBreakMode="TailTruncation"
+                                                    Text="{Binding}"
+                                                    VerticalOptions="Center" />
+                                                <Image
+                                                    Margin="24,0"
+                                                    HeightRequest="12"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    Source="icon_cross"
+                                                    WidthRequest="12" />
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <Button
+                                x:Name="addTeam"
+                                Margin="0,8"
+                                BackgroundColor="{StaticResource SecondaryBlue}"
+                                BorderColor="{StaticResource SecondaryBlue}"
+                                BorderWidth="1"
+                                Clicked="addTeam_Clicked"
+                                CornerRadius="36"
+                                HeightRequest="48"
+                                Text="Add New Team"
+                                TextColor="White" />
+                        </StackLayout>
+                    </Frame>
+                    <Button
+                        Margin="0,16"
+                        BackgroundColor="{StaticResource SecondaryBlue}"
+                        BorderColor="{StaticResource SecondaryBlue}"
+                        BorderWidth="1"
+                        CornerRadius="36"
+                        HeightRequest="48"
+                        Text="Save"
+                        TextColor="White" />
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

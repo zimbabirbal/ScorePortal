@@ -7412,6 +7412,9 @@ namespace ScorePortal.Droid
 			// aapt resource value: 0x7F07015E
 			public const int tooltip_frame_light = 2131165534;
 			
+			// aapt resource value: 0x7F07015F
+			public const int tournament = 2131165535;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

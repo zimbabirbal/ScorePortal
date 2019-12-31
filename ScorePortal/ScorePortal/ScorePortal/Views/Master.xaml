@@ -14,10 +14,7 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="32" />
-                <RowDefinition Height="32" />
-                <RowDefinition Height="32" />
-                <RowDefinition Height="32" />
+                <RowDefinition Height="*" />
 
             </Grid.RowDefinitions>
             <StackLayout
@@ -35,58 +32,36 @@
                     VerticalOptions="Center" />
                 <BoxView
                     BackgroundColor="LightGray"
-                    HeightRequest="1"
+                    HeightRequest="0.5"
                     HorizontalOptions="Fill"
                     VerticalOptions="End" />
             </StackLayout>
-            <StackLayout
+            <ListView
+                x:Name="listview"
                 Grid.Row="1"
-                Margin="0"
-                Padding="16,0"
-                Orientation="Horizontal"
-                Spacing="16">
-                <Image
-                    HeightRequest="24"
-                    HorizontalOptions="Start"
-                    Source="icon_menu"
-                    VerticalOptions="Center"
-                    WidthRequest="24" />
-                <Label Text="Add Tournament" VerticalOptions="Center" />
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                </StackLayout.GestureRecognizers>
-            </StackLayout>
-            <StackLayout
-                Grid.Row="2"
-                Margin="0"
-                Padding="16,0"
-                Orientation="Horizontal"
-                Spacing="16">
-                <Image
-                    HeightRequest="24"
-                    HorizontalOptions="Start"
-                    Source="icon_menu"
-                    VerticalOptions="Center"
-                    WidthRequest="24" />
-                <Label Text="Add Team" VerticalOptions="Center" />
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
-                </StackLayout.GestureRecognizers>
-            </StackLayout>
-            <StackLayout
-                Grid.Row="3"
-                Margin="0"
-                Padding="16,0"
-                Orientation="Horizontal"
-                Spacing="16">
-                <Image
-                    HeightRequest="24"
-                    HorizontalOptions="Start"
-                    Source="icon_menu"
-                    VerticalOptions="Center"
-                    WidthRequest="24" />
-                <Label Text="Hello" VerticalOptions="Center" />
-            </StackLayout>
+                ItemSelected="listview_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Padding="16,0"
+                                Orientation="Horizontal"
+                                Spacing="24">
+                                <Image
+                                    HeightRequest="18"
+                                    HorizontalOptions="Start"
+                                    Source="{Binding Icon}"
+                                    VerticalOptions="Center"
+                                    WidthRequest="18" />
+                                <Label
+                                    Text="{Binding Title}"
+                                    TextColor="{StaticResource SecondaryBlue}"
+                                    VerticalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         </Grid>
     </ContentPage.Content>

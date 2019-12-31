@@ -1,6 +1,7 @@
 ﻿using ScorePortal.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,44 +14,52 @@ namespace ScorePortal.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AdvancedTournament : ContentPage
     {
-        List<string> Teams;
+        ObservableCollection<string> TeamAList { get; set; }
         public AdvancedTournament()
         {
-
-            List<string> Teams = new List<string>();
             InitializeComponent();
+            TeamAList = new ObservableCollection<string>();
+            innerListTeamA.HeightRequest = 48 * TeamAList.Count;
         }
 
-        private void searchBar_SearchButtonPressed(object sender, EventArgs e)
+        private void searchBarTeamA_TextChanged(object sender, TextChangedEventArgs e)
         {
-            searchResults.ItemsSource = FetchTeam.GetSearchResults(searchBar.Text);
+            searchBarTeamAList.ItemsSource = FetchTeam.GetSearchResults(e.NewTextValue);
         }
 
-        private void searchBar_TextChanged(object sender, TextChangedEventArgs e)
+        private void searchBarTeamA_Unfocused(object sender, FocusEventArgs e)
         {
-            searchResults.ItemsSource = FetchTeam.GetSearchResults(e.NewTextValue);
+            
+            searchBarTeamAList.IsVisible = false;
         }
 
-        private void searchBar1_TextChanged(object sender, TextChangedEventArgs e)
+        private void searchBarTeamA_Focused(object sender, FocusEventArgs e)
         {
-            searchResults1.ItemsSource = FetchTeam.GetSearchResults(e.NewTextValue);
+            searchBarTeamAList.ItemsSource = FetchTeam.GetSearchResults("a");
+            searchBarTeamAList.IsVisible = true;
         }
 
-        private void searchBar1_Focused(object sender, FocusEventArgs e)
+        
+
+        private async void addTeam_Clicked(object sender, EventArgs e)
         {
-            searchBar1.IsVisible = true;
+           await Navigation.PushModalAsync(new AddTeam());
         }
 
-        private void searchBar1_Unfocused(object sender, FocusEventArgs e)
+        private async void searchBarTeamAList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            searchBar1.IsVisible = false;
+            TeamAList.Add(e.SelectedItem.ToString());
+            innerListTeamA.ItemsSource = TeamAList;
+            innerListTeamA.HeightRequest = 48 * TeamAList.Count;
         }
 
-        private void searchResults1_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void innerListSearchBarTeamA_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            searchBar1.IsVisible = false;
-            Teams.Add(e.SelectedItem.ToString());
-            innerSearchResults1.ItemsSource = Teams;
+            TeamAList.RemoveAt(e.SelectedItemIndex);
+            innerListTeamA.ItemsSource = TeamAList;
+            innerListTeamA.HeightRequest = 48 * TeamAList.Count;
         }
+
+        
     }
 }
