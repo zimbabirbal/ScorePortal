@@ -135,12 +135,15 @@
                             HeightRequest="80"
                             TextColor="{StaticResource SecondaryBlue}" />
                     </inputLayout:SfTextInputLayout>
+                    <Label x:Name="httpresponse" Text="Help" />
 
                     <Button
+                        x:Name="addTeam"
                         Margin="0,16"
                         BackgroundColor="{StaticResource SecondaryBlue}"
                         BorderColor="{StaticResource SecondaryBlue}"
                         BorderWidth="1"
+                        Clicked="addTeam_Clicked"
                         CornerRadius="36"
                         HeightRequest="48"
                         HorizontalOptions="FillAndExpand"
