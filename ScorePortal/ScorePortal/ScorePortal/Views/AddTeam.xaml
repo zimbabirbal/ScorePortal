@@ -136,6 +136,11 @@
                             TextColor="{StaticResource SecondaryBlue}" />
                     </inputLayout:SfTextInputLayout>
                     <Label x:Name="httpresponse" Text="Help" />
+                    <Button
+                        x:Name="Test"
+                        Clicked="Test_Clicked"
+                        Text="Test" />
+                    <Image x:Name="testImage" />
 
                     <Button
                         x:Name="addTeam"

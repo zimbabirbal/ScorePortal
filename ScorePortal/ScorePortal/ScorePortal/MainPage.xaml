@@ -1,37 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ScorePortal"
-             xmlns:ui="clr-namespace:ScorePortal.UiComponents"
-             x:Class="ScorePortal.MainPage">
+<ContentPage
+    x:Class="ScorePortal.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ScorePortal"
+    xmlns:ui="clr-namespace:ScorePortal.UiComponents"
+    Title="D A S H B O A R D">
 
 
-    <!-- Place new controls here -->
-    <StackLayout AutomationId="Dashboard_MainContainer" 
-                 AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                 AbsoluteLayout.LayoutFlags="SizeProportional"  
-                 HorizontalOptions="FillAndExpand" 
-                 VerticalOptions="FillAndExpand"  
-                 Spacing="0" 
-                 Padding="0,0,0,0">
-
-        <ui:DashboardHeader TitleText="D A S H B O A R D"
-                                      ShowProgressIndicator="{Binding IsBusy}" 
-                                      ShowBackButton="False" 
-                                      LeftIconClickedCommand="{Binding GenerateTestCrashCommand}" 
-                                      ShowMenuIcon="True" 
-                                      IsTitleBlack="True" 
-                                      RightIconClickedCommand="{Binding GoToSettingsCommand}" 
-                                      BackgroundColor="{StaticResource PrimaryWhite}" 
-                                      HasBlackForeground="True"/>
-
-        
-        <StackLayout Padding="0" Margin="0" Spacing="0">
-            <ListView ItemsSource="{Binding EventItems}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
+    <!--  Place new controls here  -->
+    <StackLayout
+        Padding="0,0,0,0"
+        AbsoluteLayout.LayoutBounds="0,0,1,1"
+        AbsoluteLayout.LayoutFlags="SizeProportional"
+        AutomationId="Dashboard_MainContainer"
+        HorizontalOptions="FillAndExpand"
+        Spacing="0"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            Margin="0"
+            Padding="0"
+            Spacing="0">
+            <ListView
+                HasUnevenRows="True"
+                ItemTapped="ListView_ItemTapped"
+                ItemsSource="{Binding EventItems}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ui:DashBoardEvent Margin="0,4" TitleText="{Binding Title}" BackgroundImage="{Binding BackgroundImage}"></ui:DashBoardEvent>
+                            <ui:DashBoardEvent
+                                Margin="0,4"
+                                BackgroundImage="{Binding BackgroundImage}"
+                                TitleText="{Binding Title}" />
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
