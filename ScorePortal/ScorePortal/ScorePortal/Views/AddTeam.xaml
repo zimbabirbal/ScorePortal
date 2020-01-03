@@ -6,16 +6,14 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uicomponents="clr-namespace:ScorePortal.UiComponents"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout BackgroundColor="{StaticResource SecondaryBlue}">
-                <Label
-                    Margin="24,12"
-                    FontSize="22"
-                    Text="Team Information"
-                    TextColor="White" />
-            </StackLayout>
+        <StackLayout Spacing="0">
+            <uicomponents:DashboardHeader
+                BackgroundColor="{StaticResource SecondaryBlue}"
+                TitleColor="White"
+                TitleText="Team Information" />
             <ScrollView HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                 <StackLayout Padding="24,0">
                     <inputLayout:SfTextInputLayout

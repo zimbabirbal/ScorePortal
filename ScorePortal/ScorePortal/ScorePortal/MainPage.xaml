@@ -21,21 +21,26 @@
             Margin="0"
             Padding="0"
             Spacing="0">
-            <ListView
-                HasUnevenRows="True"
-                ItemTapped="ListView_ItemTapped"
-                ItemsSource="{Binding EventItems}">
-                <ListView.ItemTemplate>
+            <ActivityIndicator
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                IsRunning="True"
+                IsVisible="{Binding IsBusy}"
+                VerticalOptions="Start"
+                WidthRequest="50" />
+            <CollectionView
+                ItemsSource="{Binding EventItems}"
+                SelectionChanged="ListView_ItemTapped"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <ui:DashBoardEvent
-                                Margin="0,4"
-                                BackgroundImage="{Binding BackgroundImage}"
-                                TitleText="{Binding Title}" />
-                        </ViewCell>
+                        <ui:DashBoardEvent
+                            Padding="0,1"
+                            BackgroundImage="{Binding BackgroundImage}"
+                            TitleText="{Binding Title}" />
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </StackLayout>
 

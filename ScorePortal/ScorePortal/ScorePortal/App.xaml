@@ -61,6 +61,7 @@
             <Color x:Key="DashboardTitleBackgroundColor">#DFFFFFFF</Color>
             <Color x:Key="DashboardBoxviewColor">#E5E5E5</Color>
             <Color x:Key="DashboardTextColor">#343434</Color>
+            <Color x:Key="DashboardBorderColor">#CCCCCC</Color>
 
             <!--  REGULAR TEXT STYLES  -->
 

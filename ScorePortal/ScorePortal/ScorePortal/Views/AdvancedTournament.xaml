@@ -5,21 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uicomponents="clr-namespace:ScorePortal.UiComponents"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <StackLayout BackgroundColor="{StaticResource SecondaryBlue}">
-                    <Label
-                        Margin="24,12"
-                        FontSize="22"
-                        Text="Add Team Information"
-                        TextColor="White" />
-                </StackLayout>
-                <StackLayout
-                    Padding="24,0"
-                    Spacing="16"
-                    VerticalOptions="CenterAndExpand">
+        <StackLayout Spacing="0">
+            <uicomponents:DashboardHeader
+                BackgroundColor="{StaticResource SecondaryBlue}"
+                TitleColor="White"
+                TitleText="Tournament Information" />
+            <ScrollView VerticalOptions="CenterAndExpand">
+                <StackLayout Padding="24,0" Spacing="16">
 
                     <Frame CornerRadius="12">
                         <StackLayout>
@@ -81,7 +76,7 @@
                         Text="Save"
                         TextColor="White" />
                 </StackLayout>
-            </StackLayout>
-        </ScrollView>
+            </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -10,14 +10,11 @@
     NavigationPage.HasNavigationBar="True"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout BackgroundColor="{StaticResource SecondaryBlue}">
-                <Label
-                    Margin="24,12"
-                    FontSize="22"
-                    Text="Tournament Information"
-                    TextColor="White" />
-            </StackLayout>
+        <StackLayout Spacing="0">
+            <uicomponents:DashboardHeader
+                BackgroundColor="{StaticResource SecondaryBlue}"
+                TitleColor="White"
+                TitleText="Tournament Information" />
             <ScrollView HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                 <StackLayout Padding="24,0">
                     <inputLayout:SfTextInputLayout

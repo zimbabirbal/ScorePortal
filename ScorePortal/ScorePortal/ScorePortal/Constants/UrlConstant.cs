@@ -10,5 +10,7 @@ namespace ScorePortal.Constants
         //Team Request
         public const string TeamGetRequest = "api/Team/{0}";
         public const string TeamPostRequest = "api/Team";
+        //Tournament
+        public const string AllTournamentRequest = "api/Tournament";
     }
 }

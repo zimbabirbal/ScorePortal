@@ -19,8 +19,6 @@ namespace ScorePortal.UiComponents
         public DashboardHeader ()
 		{
 			InitializeComponent ();
-            IsTitleBlack = false;
-            lblTitle.TextColor = IsTitleBlack ? ((Color)App.Current.Resources["AppBackgroundColor"]) : ((Color)App.Current.Resources["PrimaryWhite"]);
 
             iconRight.IsVisible = true;
             rightIconClickArea.IsVisible = true;
@@ -33,7 +31,6 @@ namespace ScorePortal.UiComponents
             // set defaults
             iconLeft.IsVisible = false;
             leftIconClickArea.IsVisible = false;
-            leftIconFile.File = IsTitleBlack ? IconConstants.IconBackBlack : IconConstants.IconBackWhite;
             iconLeft.GestureRecognizers.Add(leftIconClickGesture);
             leftIconClickArea.GestureRecognizers.Add(leftIconClickGesture);
             leftIconClickGesture.Command = new Command(async () => await DefaultLeftIconClickBehavior());
@@ -97,22 +94,22 @@ namespace ScorePortal.UiComponents
         }
 
 
-        public static readonly BindableProperty IsTitleBlackProperty =
+        public static readonly BindableProperty TitleColorProperty =
             BindableProperty.Create(
-                propertyName: nameof(IsTitleBlack),
-                returnType: typeof(bool),
+                propertyName: nameof(TitleColor),
+                returnType: typeof(Color),
                 declaringType: typeof(DashboardHeader),
-                defaultValue: false,
+                defaultValue: Color.Black,
                 defaultBindingMode: BindingMode.OneWay);
-        public bool IsTitleBlack
+        public Color TitleColor
         {
             get
             {
-                return (bool)GetValue(IsTitleBlackProperty);
+                return (Color)GetValue(TitleColorProperty);
             }
             set
             {
-                SetValue(IsTitleBlackProperty, value);
+                SetValue(TitleColorProperty, value);
             }
         }
 
@@ -278,6 +275,10 @@ namespace ScorePortal.UiComponents
             {
                 lblTitle.Text = TitleText;
             }
+            if (propertyName == TitleColorProperty.PropertyName)
+            {
+                lblTitle.TextColor = TitleColor;
+            }
             if (propertyName == SubHeaderTitleTextProperty.PropertyName)
             {
                 if (!string.IsNullOrWhiteSpace(SubHeaderTitleText))
@@ -313,11 +314,6 @@ namespace ScorePortal.UiComponents
             else if (propertyName == ShowMenuIconProperty.PropertyName)
             {
                 rightIconFile.File = ShowMenuIcon ? (HasBlackForeground ? IconConstants.IconMenu : IconConstants.IconMenuWhite) : IconConstants.IconCross;
-            }
-            else if (propertyName == IsTitleBlackProperty.PropertyName)
-            {
-                lblTitle.TextColor = IsTitleBlack ? ((Color)App.Current.Resources["AppBackgroundColor"]) : ((Color)App.Current.Resources["PrimaryWhite"]);
-                leftIconFile.File = IsTitleBlack ? IconConstants.IconBackBlack : IconConstants.IconBackWhite;
             }
             else if (propertyName == HasBlackForegroundProperty.PropertyName)
             {

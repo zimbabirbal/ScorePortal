@@ -21,5 +21,10 @@ namespace ScorePortal
         {
             await Navigation.PushModalAsync(new EventDetails());
         }
+
+        private async void ListView_ItemTapped(object sender, SelectionChangedEventArgs e)
+        {
+            await Navigation.PushModalAsync(new EventDetails());
+        }
     }
 }
